@@ -1,0 +1,11 @@
+bmptool:	main.c
+	cc -g main.c -o bmptool
+
+bmplib.c:	bmplib.c bmplib.h
+	$(CC) -Wall -c $< -o $@
+
+main.o:	main.c bmplib.h 
+	$(CC) -Wall -c $< -o $@
+
+clean:
+	rm -f bmptool *.o core *~
