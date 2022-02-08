@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1559673905 source:c:\users\nicoa\desktop\chapter8_examprep\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

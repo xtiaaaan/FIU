@@ -1,0 +1,12 @@
+void countLetters(char word[], char wordCount[])
+{
+	char *p = word;
+	
+	while(*p != '\0'){
+		switch(*p)
+			case 'a':
+				wordCount[0]++;
+				break;
+			case 'b':
+				wordCount[1]++;
+				break;

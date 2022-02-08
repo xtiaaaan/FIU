@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1559238328 source:c:\users\nicoa\desktop\chapter7_array&pointer\main.c
+	<stdio.h>
+	<stdlib.h>
+

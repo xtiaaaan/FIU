@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1559070413 source:c:\users\nicoa\desktop\exam1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

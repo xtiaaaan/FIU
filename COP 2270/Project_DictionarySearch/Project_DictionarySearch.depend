@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1561048734 source:c:\users\x'tian\desktop\project_dictionarysearch\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1561057601 source:c:\users\nicoa\dropbox\between me and i\engineering\cop 2270\project_dictionarysearch\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1558032572 source:c:\users\nicoa\dropbox\between me and i\engineering\cop 2270\chapter4_calculations\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

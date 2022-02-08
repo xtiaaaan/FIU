@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1559246331 source:c:\users\nicoa\desktop\chapter11_stringtokens\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

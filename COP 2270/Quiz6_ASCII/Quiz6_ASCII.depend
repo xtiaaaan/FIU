@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1559673020 source:c:\users\nicoa\desktop\quiz6_ascii\main.c
+	<stdio.h>
+	<stdlib.h>
+

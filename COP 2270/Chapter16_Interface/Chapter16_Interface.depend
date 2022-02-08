@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1560281793 source:c:\users\nicoa\desktop\chapter16_interface\main.cpp
+	<iostream>
+	"GradeBook.h"
+
+1560281207 c:\users\nicoa\desktop\chapter16_interface\gradebook.h
+	<string>
+
+1560281585 source:c:\users\nicoa\desktop\chapter16_interface\gradebook.cpp
+	<iostream>
+	"GradeBook.h"
+

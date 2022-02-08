@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1559849992 source:c:\users\nicoa\desktop\exam2_fileprocessing\main.c
+	<stdio.h>
+	<stdlib.h>
+
