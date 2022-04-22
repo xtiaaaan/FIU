@@ -1,0 +1,3 @@
+Usage:
+
+canny [input file] [sigma value] [percent value]

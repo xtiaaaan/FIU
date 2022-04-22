@@ -1,0 +1,3 @@
+Usage:
+
+sobel [input file] [high threshold value] [low threshold value]
