@@ -176,7 +176,6 @@ namespace COP4226_Assignment2_Minesweeper
             this.gamesOpen.Size = new System.Drawing.Size(100, 23);
             this.gamesOpen.TabIndex = 6;
             this.gamesOpen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gamesOpen.TextChanged += new System.EventHandler(this.gamesOpen_TextChanged);
             // 
             // textBox1
             // 

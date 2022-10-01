@@ -47,33 +47,43 @@ namespace COP4226_Assignment2_Minesweeper
             {
                 row = col = 9;
                 mines = 10;
-                text = "Easy";
+                text = "Easy - " + textBox1.Text;
             }
             else if (medium.Checked)
             {
                 row = col = 16;
                 mines = 40;
-                text = "Medium";
+                text = "Medium - " + textBox1.Text;
             }
             else if (expert.Checked)
             {
                 row = 30;
                 col = 16;
                 mines = 99;
-                text = "Expert";
+                text = "Expert - " + textBox1.Text;
             }
             else if (custom.Checked)
             {
+                bool valid = false;
                 using(Form3 dialog = new Form3())
                 {
-                    if(dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    do
                     {
-                        row = dialog.row;
-                        col = dialog.col;
-                        mines = dialog.mines;
-                    }
+                        dialog.ShowDialog();
+                        if (dialog.row > 0 && dialog.col > 0 && dialog.mines > 0)
+                        {
+                            row = dialog.row;
+                            col = dialog.col;
+                            mines = dialog.mines;
+                            valid = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter integers greater than zero", "Positive integers only", MessageBoxButtons.OK);
+                        }
+                    } while (!valid);
                 }
-                text = "Custom";
+                text = "Custom - " + textBox1.Text;
                 
             }
             else
@@ -134,11 +144,6 @@ namespace COP4226_Assignment2_Minesweeper
         private void exit_Pressed(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void gamesOpen_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

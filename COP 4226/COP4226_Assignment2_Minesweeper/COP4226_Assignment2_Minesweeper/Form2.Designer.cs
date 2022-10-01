@@ -53,7 +53,7 @@
             // flagsLabel
             // 
             this.flagsLabel.AutoSize = true;
-            this.flagsLabel.Location = new System.Drawing.Point(452, 9);
+            this.flagsLabel.Location = new System.Drawing.Point(183, 9);
             this.flagsLabel.Name = "flagsLabel";
             this.flagsLabel.Size = new System.Drawing.Size(0, 15);
             this.flagsLabel.TabIndex = 1;
@@ -61,7 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(349, 9);
+            this.label1.Location = new System.Drawing.Point(80, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 15);
             this.label1.TabIndex = 2;

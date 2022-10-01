@@ -28,36 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rowBox = new System.Windows.Forms.TextBox();
-            this.columnBox = new System.Windows.Forms.TextBox();
-            this.minesBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ok = new System.Windows.Forms.Button();
+            this.colUpDown = new System.Windows.Forms.NumericUpDown();
+            this.minesUpDown = new System.Windows.Forms.NumericUpDown();
+            this.rowUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.colUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minesUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rowBox
-            // 
-            this.rowBox.Location = new System.Drawing.Point(69, 36);
-            this.rowBox.Name = "rowBox";
-            this.rowBox.Size = new System.Drawing.Size(100, 23);
-            this.rowBox.TabIndex = 0;
-            // 
-            // columnBox
-            // 
-            this.columnBox.Location = new System.Drawing.Point(68, 65);
-            this.columnBox.Name = "columnBox";
-            this.columnBox.Size = new System.Drawing.Size(100, 23);
-            this.columnBox.TabIndex = 1;
-            // 
-            // minesBox
-            // 
-            this.minesBox.Location = new System.Drawing.Point(68, 94);
-            this.minesBox.Name = "minesBox";
-            this.minesBox.Size = new System.Drawing.Size(100, 23);
-            this.minesBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -106,35 +88,58 @@
             this.ok.UseVisualStyleBackColor = true;
             this.ok.Click += new System.EventHandler(this.okay_Click);
             // 
+            // colUpDown
+            // 
+            this.colUpDown.Location = new System.Drawing.Point(68, 66);
+            this.colUpDown.Name = "colUpDown";
+            this.colUpDown.Size = new System.Drawing.Size(120, 23);
+            this.colUpDown.TabIndex = 8;
+            // 
+            // minesUpDown
+            // 
+            this.minesUpDown.Location = new System.Drawing.Point(68, 95);
+            this.minesUpDown.Name = "minesUpDown";
+            this.minesUpDown.Size = new System.Drawing.Size(120, 23);
+            this.minesUpDown.TabIndex = 9;
+            // 
+            // rowUpDown
+            // 
+            this.rowUpDown.Location = new System.Drawing.Point(68, 37);
+            this.rowUpDown.Name = "rowUpDown";
+            this.rowUpDown.Size = new System.Drawing.Size(120, 23);
+            this.rowUpDown.TabIndex = 10;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 162);
+            this.Controls.Add(this.rowUpDown);
+            this.Controls.Add(this.minesUpDown);
+            this.Controls.Add(this.colUpDown);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.minesBox);
-            this.Controls.Add(this.columnBox);
-            this.Controls.Add(this.rowBox);
             this.Name = "Form3";
             this.Text = "Form3";
+            ((System.ComponentModel.ISupportInitialize)(this.colUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minesUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private TextBox rowBox;
-        private TextBox columnBox;
-        private TextBox minesBox;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Button ok;
+        private NumericUpDown colUpDown;
+        private NumericUpDown minesUpDown;
+        private NumericUpDown rowUpDown;
     }
 }
