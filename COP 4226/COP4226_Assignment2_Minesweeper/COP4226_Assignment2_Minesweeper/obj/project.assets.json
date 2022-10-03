@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicoa\\source\\repos\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper.csproj",
+      "projectUniqueName": "C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper.csproj",
       "projectName": "COP4226_Assignment2_Minesweeper",
-      "projectPath": "C:\\Users\\nicoa\\source\\repos\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper.csproj",
+      "projectPath": "C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper.csproj",
       "packagesPath": "C:\\Users\\nicoa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicoa\\source\\repos\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\obj\\",
+      "outputPath": "C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
