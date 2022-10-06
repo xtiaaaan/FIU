@@ -6,5 +6,10 @@ namespace COP4226_Assignment3_GraphingCalculator
         {
             InitializeComponent();
         }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
