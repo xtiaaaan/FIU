@@ -1,15 +1,12 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "S04pqA9s0GK6KXRpN2C4q75ZP8ALROwpYJ/AidKDE2MCDFuLLeEDTd+rJIycpd5u4p5Q/Lxn3uYuogYvVtsA2g==",
+=======
   "dgSpecHash": "NM0P3pOXLPaGez/osYCNKKJwEPnrudgFrtxUJx/5VCfY4AUecp2ezZIfcf4rQ5+gd385mWu6VEPlY20hjfphGg==",
+>>>>>>> 0f5131e592f6df9f79e2f26a0d7ab89c691d90db
   "success": true,
   "projectFilePath": "C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment2_Minesweeper\\COP4226_Assignment2_Minesweeper\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
