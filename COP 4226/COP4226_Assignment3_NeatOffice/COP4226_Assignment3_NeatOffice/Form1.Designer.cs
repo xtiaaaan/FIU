@@ -34,11 +34,14 @@
             this.clearCalculatorHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveCalculatorHistoryAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printCalculatorHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.saveMinimumSpanningTreeAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveShortestPathAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.graphMatrixtxtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graphMatrixcsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multipleGraphsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,29 +53,11 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dayCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.graphSectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
-            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -81,28 +66,39 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.divide = new System.Windows.Forms.Button();
+            this.digit7 = new System.Windows.Forms.Button();
+            this.digit8 = new System.Windows.Forms.Button();
+            this.digit9 = new System.Windows.Forms.Button();
+            this.multiply = new System.Windows.Forms.Button();
+            this.digit4 = new System.Windows.Forms.Button();
+            this.digit5 = new System.Windows.Forms.Button();
+            this.digit6 = new System.Windows.Forms.Button();
+            this.minus = new System.Windows.Forms.Button();
+            this.digit1 = new System.Windows.Forms.Button();
+            this.digit2 = new System.Windows.Forms.Button();
+            this.digit3 = new System.Windows.Forms.Button();
+            this.plus = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.digit0 = new System.Windows.Forms.Button();
+            this.decimalPoint = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
+            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -114,6 +110,7 @@
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
@@ -127,8 +124,11 @@
             this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dayCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graphSectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -137,7 +137,6 @@
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -147,13 +146,14 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.toolStripContainer2.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer2.ContentPanel.SuspendLayout();
             this.toolStripContainer2.SuspendLayout();
             this.statusStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.toolStrip3.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -202,6 +202,11 @@
             this.printCalculatorHistoryToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.printCalculatorHistoryToolStripMenuItem.Text = "Print Calculator History";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(253, 6);
+            // 
             // saveMinimumSpanningTreeAsToolStripMenuItem
             // 
             this.saveMinimumSpanningTreeAsToolStripMenuItem.Name = "saveMinimumSpanningTreeAsToolStripMenuItem";
@@ -213,6 +218,11 @@
             this.saveShortestPathAsToolStripMenuItem.Name = "saveShortestPathAsToolStripMenuItem";
             this.saveShortestPathAsToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.saveShortestPathAsToolStripMenuItem.Text = "Save Shortest Path As...";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(253, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -237,6 +247,11 @@
             this.calculatorHistoryToolStripMenuItem.Name = "calculatorHistoryToolStripMenuItem";
             this.calculatorHistoryToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.calculatorHistoryToolStripMenuItem.Text = "Calculator History";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(171, 6);
             // 
             // graphMatrixtxtToolStripMenuItem
             // 
@@ -339,46 +354,17 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(107, 17);
             this.toolStripStatusLabel1.Text = "Good Day! Today is";
             // 
-            // toolStrip1
+            // toolStripStatusLabel3
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(41, 25);
-            this.toolStrip1.TabIndex = 0;
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
             // 
-            // toolStripDropDownButton1
+            // toolStripStatusLabel4
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.calculatorToolStripMenuItem,
-            this.dayCounterToolStripMenuItem,
-            this.graphSectionToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
-            // calculatorToolStripMenuItem
-            // 
-            this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
-            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.calculatorToolStripMenuItem.Text = "Calculator";
-            // 
-            // dayCounterToolStripMenuItem
-            // 
-            this.dayCounterToolStripMenuItem.Name = "dayCounterToolStripMenuItem";
-            this.dayCounterToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.dayCounterToolStripMenuItem.Text = "Day Counter";
-            // 
-            // graphSectionToolStripMenuItem
-            // 
-            this.graphSectionToolStripMenuItem.Name = "graphSectionToolStripMenuItem";
-            this.graphSectionToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.graphSectionToolStripMenuItem.Text = "Graph Section";
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
             // splitContainer1
             // 
@@ -436,22 +422,22 @@
             this.tableLayoutPanel1.Controls.Add(this.button5, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.button6, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.button7, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button8, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button9, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button10, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button11, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button12, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button13, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button14, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button15, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button16, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button17, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.button18, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.button19, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.button20, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.divide, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.digit7, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.digit8, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.digit9, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.multiply, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.digit4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.digit5, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.digit6, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.minus, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.digit1, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.digit2, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.digit3, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.plus, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.button21, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.button22, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.button23, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.digit0, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.decimalPoint, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.button24, 3, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -466,140 +452,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(414, 354);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // toolStripContainer2
-            // 
-            // 
-            // toolStripContainer2.BottomToolStripPanel
-            // 
-            this.toolStripContainer2.BottomToolStripPanel.Controls.Add(this.statusStrip2);
-            // 
-            // toolStripContainer2.ContentPanel
-            // 
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.textBox2);
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.textBox1);
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.label6);
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.label5);
-            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(411, 468);
-            this.toolStripContainer2.Location = new System.Drawing.Point(2, 0);
-            this.toolStripContainer2.Name = "toolStripContainer2";
-            this.toolStripContainer2.Size = new System.Drawing.Size(411, 490);
-            this.toolStripContainer2.TabIndex = 0;
-            this.toolStripContainer2.Text = "toolStripContainer2";
-            // 
-            // statusStrip2
-            // 
-            this.statusStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBar1,
-            this.toolStripStatusLabel2});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 0);
-            this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Size = new System.Drawing.Size(411, 22);
-            this.statusStrip2.TabIndex = 0;
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel2.Text = "Ready!";
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Day Counter";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "From:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "To:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(47, 53);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(47, 99);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(272, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Days:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(313, 79);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(83, 23);
-            this.numericUpDown1.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 15);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "List of Imported Graphs";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 303);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 15);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "List of Results";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(36, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(341, 114);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(36, 321);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(341, 114);
-            this.textBox2.TabIndex = 10;
-            // 
             // textBox3
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.textBox3, 4);
@@ -609,6 +461,9 @@
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox3.Size = new System.Drawing.Size(408, 71);
             this.textBox3.TabIndex = 1;
+            this.textBox3.Text = "Enter an expression";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button1
             // 
@@ -639,6 +494,8 @@
             // 
             // button4
             // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(312, 80);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 40);
@@ -673,122 +530,135 @@
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // divide
             // 
-            this.button8.Location = new System.Drawing.Point(312, 126);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(97, 40);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "÷";
-            this.button8.UseVisualStyleBackColor = true;
+            this.divide.Location = new System.Drawing.Point(312, 126);
+            this.divide.Name = "divide";
+            this.divide.Size = new System.Drawing.Size(97, 40);
+            this.divide.TabIndex = 9;
+            this.divide.Text = "÷";
+            this.divide.UseVisualStyleBackColor = true;
+            this.divide.Click += new System.EventHandler(this.divide_Click);
             // 
-            // button9
+            // digit7
             // 
-            this.button9.Location = new System.Drawing.Point(3, 172);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(97, 40);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "7";
-            this.button9.UseVisualStyleBackColor = true;
+            this.digit7.Location = new System.Drawing.Point(3, 172);
+            this.digit7.Name = "digit7";
+            this.digit7.Size = new System.Drawing.Size(97, 40);
+            this.digit7.TabIndex = 10;
+            this.digit7.Text = "7";
+            this.digit7.UseVisualStyleBackColor = true;
+            this.digit7.Click += new System.EventHandler(this.digit7_Click);
             // 
-            // button10
+            // digit8
             // 
-            this.button10.Location = new System.Drawing.Point(106, 172);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(97, 40);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "8";
-            this.button10.UseVisualStyleBackColor = true;
+            this.digit8.Location = new System.Drawing.Point(106, 172);
+            this.digit8.Name = "digit8";
+            this.digit8.Size = new System.Drawing.Size(97, 40);
+            this.digit8.TabIndex = 11;
+            this.digit8.Text = "8";
+            this.digit8.UseVisualStyleBackColor = true;
+            this.digit8.Click += new System.EventHandler(this.digit8_Click);
             // 
-            // button11
+            // digit9
             // 
-            this.button11.Location = new System.Drawing.Point(209, 172);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(97, 40);
-            this.button11.TabIndex = 12;
-            this.button11.Text = "9";
-            this.button11.UseVisualStyleBackColor = true;
+            this.digit9.Location = new System.Drawing.Point(209, 172);
+            this.digit9.Name = "digit9";
+            this.digit9.Size = new System.Drawing.Size(97, 40);
+            this.digit9.TabIndex = 12;
+            this.digit9.Text = "9";
+            this.digit9.UseVisualStyleBackColor = true;
+            this.digit9.Click += new System.EventHandler(this.digit9_Click);
             // 
-            // button12
+            // multiply
             // 
-            this.button12.Location = new System.Drawing.Point(312, 172);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(97, 40);
-            this.button12.TabIndex = 13;
-            this.button12.Text = "x";
-            this.button12.UseVisualStyleBackColor = true;
+            this.multiply.Location = new System.Drawing.Point(312, 172);
+            this.multiply.Name = "multiply";
+            this.multiply.Size = new System.Drawing.Size(97, 40);
+            this.multiply.TabIndex = 13;
+            this.multiply.Text = "x";
+            this.multiply.UseVisualStyleBackColor = true;
+            this.multiply.Click += new System.EventHandler(this.multiply_Click);
             // 
-            // button13
+            // digit4
             // 
-            this.button13.Location = new System.Drawing.Point(3, 218);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(97, 40);
-            this.button13.TabIndex = 14;
-            this.button13.Text = "4";
-            this.button13.UseVisualStyleBackColor = true;
+            this.digit4.Location = new System.Drawing.Point(3, 218);
+            this.digit4.Name = "digit4";
+            this.digit4.Size = new System.Drawing.Size(97, 40);
+            this.digit4.TabIndex = 14;
+            this.digit4.Text = "4";
+            this.digit4.UseVisualStyleBackColor = true;
+            this.digit4.Click += new System.EventHandler(this.digit4_Click);
             // 
-            // button14
+            // digit5
             // 
-            this.button14.Location = new System.Drawing.Point(106, 218);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(97, 40);
-            this.button14.TabIndex = 15;
-            this.button14.Text = "5";
-            this.button14.UseVisualStyleBackColor = true;
+            this.digit5.Location = new System.Drawing.Point(106, 218);
+            this.digit5.Name = "digit5";
+            this.digit5.Size = new System.Drawing.Size(97, 40);
+            this.digit5.TabIndex = 15;
+            this.digit5.Text = "5";
+            this.digit5.UseVisualStyleBackColor = true;
+            this.digit5.Click += new System.EventHandler(this.digit5_Click);
             // 
-            // button15
+            // digit6
             // 
-            this.button15.Location = new System.Drawing.Point(209, 218);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(97, 40);
-            this.button15.TabIndex = 16;
-            this.button15.Text = "6";
-            this.button15.UseVisualStyleBackColor = true;
+            this.digit6.Location = new System.Drawing.Point(209, 218);
+            this.digit6.Name = "digit6";
+            this.digit6.Size = new System.Drawing.Size(97, 40);
+            this.digit6.TabIndex = 16;
+            this.digit6.Text = "6";
+            this.digit6.UseVisualStyleBackColor = true;
+            this.digit6.Click += new System.EventHandler(this.digit6_Click);
             // 
-            // button16
+            // minus
             // 
-            this.button16.Location = new System.Drawing.Point(312, 218);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(97, 40);
-            this.button16.TabIndex = 17;
-            this.button16.Text = "-";
-            this.button16.UseVisualStyleBackColor = true;
+            this.minus.Location = new System.Drawing.Point(312, 218);
+            this.minus.Name = "minus";
+            this.minus.Size = new System.Drawing.Size(97, 40);
+            this.minus.TabIndex = 17;
+            this.minus.Text = "-";
+            this.minus.UseVisualStyleBackColor = true;
+            this.minus.Click += new System.EventHandler(this.minus_Click);
             // 
-            // button17
+            // digit1
             // 
-            this.button17.Location = new System.Drawing.Point(3, 264);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(97, 40);
-            this.button17.TabIndex = 18;
-            this.button17.Text = "1";
-            this.button17.UseVisualStyleBackColor = true;
+            this.digit1.Location = new System.Drawing.Point(3, 264);
+            this.digit1.Name = "digit1";
+            this.digit1.Size = new System.Drawing.Size(97, 40);
+            this.digit1.TabIndex = 18;
+            this.digit1.Text = "1";
+            this.digit1.UseVisualStyleBackColor = true;
+            this.digit1.Click += new System.EventHandler(this.digit1_Click);
             // 
-            // button18
+            // digit2
             // 
-            this.button18.Location = new System.Drawing.Point(106, 264);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(97, 40);
-            this.button18.TabIndex = 19;
-            this.button18.Text = "2";
-            this.button18.UseVisualStyleBackColor = true;
+            this.digit2.Location = new System.Drawing.Point(106, 264);
+            this.digit2.Name = "digit2";
+            this.digit2.Size = new System.Drawing.Size(97, 40);
+            this.digit2.TabIndex = 19;
+            this.digit2.Text = "2";
+            this.digit2.UseVisualStyleBackColor = true;
+            this.digit2.Click += new System.EventHandler(this.digit2_Click);
             // 
-            // button19
+            // digit3
             // 
-            this.button19.Location = new System.Drawing.Point(209, 264);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(97, 40);
-            this.button19.TabIndex = 20;
-            this.button19.Text = "3";
-            this.button19.UseVisualStyleBackColor = true;
+            this.digit3.Location = new System.Drawing.Point(209, 264);
+            this.digit3.Name = "digit3";
+            this.digit3.Size = new System.Drawing.Size(97, 40);
+            this.digit3.TabIndex = 20;
+            this.digit3.Text = "3";
+            this.digit3.UseVisualStyleBackColor = true;
+            this.digit3.Click += new System.EventHandler(this.digit3_Click);
             // 
-            // button20
+            // plus
             // 
-            this.button20.Location = new System.Drawing.Point(312, 264);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(97, 40);
-            this.button20.TabIndex = 21;
-            this.button20.Text = "+";
-            this.button20.UseVisualStyleBackColor = true;
+            this.plus.Location = new System.Drawing.Point(312, 264);
+            this.plus.Name = "plus";
+            this.plus.Size = new System.Drawing.Size(97, 40);
+            this.plus.TabIndex = 21;
+            this.plus.Text = "+";
+            this.plus.UseVisualStyleBackColor = true;
+            this.plus.Click += new System.EventHandler(this.plus_Click);
             // 
             // button21
             // 
@@ -799,23 +669,25 @@
             this.button21.Text = "+/-";
             this.button21.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // digit0
             // 
-            this.button22.Location = new System.Drawing.Point(106, 310);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(97, 40);
-            this.button22.TabIndex = 23;
-            this.button22.Text = "0";
-            this.button22.UseVisualStyleBackColor = true;
+            this.digit0.Location = new System.Drawing.Point(106, 310);
+            this.digit0.Name = "digit0";
+            this.digit0.Size = new System.Drawing.Size(97, 40);
+            this.digit0.TabIndex = 23;
+            this.digit0.Text = "0";
+            this.digit0.UseVisualStyleBackColor = true;
+            this.digit0.Click += new System.EventHandler(this.digit0_Click);
             // 
-            // button23
+            // decimalPoint
             // 
-            this.button23.Location = new System.Drawing.Point(209, 310);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(97, 40);
-            this.button23.TabIndex = 24;
-            this.button23.Text = ".";
-            this.button23.UseVisualStyleBackColor = true;
+            this.decimalPoint.Location = new System.Drawing.Point(209, 310);
+            this.decimalPoint.Name = "decimalPoint";
+            this.decimalPoint.Size = new System.Drawing.Size(97, 40);
+            this.decimalPoint.TabIndex = 24;
+            this.decimalPoint.Text = ".";
+            this.decimalPoint.UseVisualStyleBackColor = true;
+            this.decimalPoint.Click += new System.EventHandler(this.decimalPoint_Click);
             // 
             // button24
             // 
@@ -826,20 +698,139 @@
             this.button24.Text = "=";
             this.button24.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator1
+            // numericUpDown1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(253, 6);
+            this.numericUpDown1.Location = new System.Drawing.Point(313, 79);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(83, 23);
+            this.numericUpDown1.TabIndex = 6;
             // 
-            // toolStripSeparator2
+            // label4
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(253, 6);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(272, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Days:";
             // 
-            // toolStripSeparator3
+            // dateTimePicker2
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.dateTimePicker2.Location = new System.Drawing.Point(47, 99);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker2.TabIndex = 4;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(47, 53);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "To:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "From:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Day Counter";
+            // 
+            // toolStripContainer2
+            // 
+            // 
+            // toolStripContainer2.BottomToolStripPanel
+            // 
+            this.toolStripContainer2.BottomToolStripPanel.Controls.Add(this.statusStrip2);
+            // 
+            // toolStripContainer2.ContentPanel
+            // 
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.textBox2);
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.textBox1);
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.label6);
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.label5);
+            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(411, 443);
+            this.toolStripContainer2.Location = new System.Drawing.Point(2, 0);
+            this.toolStripContainer2.Name = "toolStripContainer2";
+            this.toolStripContainer2.Size = new System.Drawing.Size(411, 490);
+            this.toolStripContainer2.TabIndex = 0;
+            this.toolStripContainer2.Text = "toolStripContainer2";
+            // 
+            // statusStrip2
+            // 
+            this.statusStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripProgressBar1,
+            this.toolStripStatusLabel2});
+            this.statusStrip2.Location = new System.Drawing.Point(0, 0);
+            this.statusStrip2.Name = "statusStrip2";
+            this.statusStrip2.Size = new System.Drawing.Size(411, 22);
+            this.statusStrip2.TabIndex = 0;
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel2.Text = "Ready!";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(36, 321);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(341, 114);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(36, 44);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(341, 114);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(36, 303);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 15);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "List of Results";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 15);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "List of Imported Graphs";
             // 
             // toolStrip2
             // 
@@ -861,28 +852,6 @@
             this.toolStrip2.Size = new System.Drawing.Size(24, 213);
             this.toolStrip2.TabIndex = 0;
             // 
-            // toolStrip3
-            // 
-            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton9,
-            this.toolStripButton10,
-            this.toolStripButton11,
-            this.toolStripSeparator7,
-            this.toolStripButton12,
-            this.toolStripButton13,
-            this.toolStripSeparator8,
-            this.toolStripButton14,
-            this.toolStripButton15,
-            this.toolStripSeparator9,
-            this.toolStripButton16,
-            this.toolStripSeparator10,
-            this.toolStripButton17});
-            this.toolStrip3.Location = new System.Drawing.Point(0, 3);
-            this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(24, 242);
-            this.toolStrip3.TabIndex = 0;
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -898,13 +867,13 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(30, 20);
+            this.toolStripButton2.Size = new System.Drawing.Size(22, 20);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(30, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(22, 6);
             // 
             // toolStripButton3
             // 
@@ -969,6 +938,28 @@
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.Size = new System.Drawing.Size(22, 20);
             this.toolStripButton8.Text = "toolStripButton8";
+            // 
+            // toolStrip3
+            // 
+            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton9,
+            this.toolStripButton10,
+            this.toolStripButton11,
+            this.toolStripSeparator7,
+            this.toolStripButton12,
+            this.toolStripButton13,
+            this.toolStripSeparator8,
+            this.toolStripButton14,
+            this.toolStripButton15,
+            this.toolStripSeparator9,
+            this.toolStripButton16,
+            this.toolStripSeparator10,
+            this.toolStripButton17});
+            this.toolStrip3.Location = new System.Drawing.Point(0, 3);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.Size = new System.Drawing.Size(24, 242);
+            this.toolStrip3.TabIndex = 0;
             // 
             // toolStripButton9
             // 
@@ -1071,17 +1062,46 @@
             this.toolStripButton17.Size = new System.Drawing.Size(22, 20);
             this.toolStripButton17.Text = "toolStripButton17";
             // 
-            // toolStripStatusLabel3
+            // toolStrip1
             // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(41, 25);
+            this.toolStrip1.TabIndex = 0;
             // 
-            // toolStripStatusLabel4
+            // toolStripDropDownButton1
             // 
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculatorToolStripMenuItem,
+            this.dayCounterToolStripMenuItem,
+            this.graphSectionToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // calculatorToolStripMenuItem
+            // 
+            this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
+            this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.calculatorToolStripMenuItem.Text = "Calculator";
+            // 
+            // dayCounterToolStripMenuItem
+            // 
+            this.dayCounterToolStripMenuItem.Name = "dayCounterToolStripMenuItem";
+            this.dayCounterToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.dayCounterToolStripMenuItem.Text = "Day Counter";
+            // 
+            // graphSectionToolStripMenuItem
+            // 
+            this.graphSectionToolStripMenuItem.Name = "graphSectionToolStripMenuItem";
+            this.graphSectionToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.graphSectionToolStripMenuItem.Text = "Graph Section";
             // 
             // Form1
             // 
@@ -1108,8 +1128,6 @@
             this.toolStripContainer1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1121,6 +1139,7 @@
             this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.toolStripContainer2.BottomToolStripPanel.ResumeLayout(false);
             this.toolStripContainer2.BottomToolStripPanel.PerformLayout();
             this.toolStripContainer2.ContentPanel.ResumeLayout(false);
@@ -1129,11 +1148,12 @@
             this.toolStripContainer2.PerformLayout();
             this.statusStrip2.ResumeLayout(false);
             this.statusStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.toolStrip3.ResumeLayout(false);
             this.toolStrip3.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1187,22 +1207,22 @@
         private Button button5;
         private Button button6;
         private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button button15;
-        private Button button16;
-        private Button button17;
-        private Button button18;
-        private Button button19;
-        private Button button20;
+        private Button divide;
+        private Button digit7;
+        private Button digit8;
+        private Button digit9;
+        private Button multiply;
+        private Button digit4;
+        private Button digit5;
+        private Button digit6;
+        private Button minus;
+        private Button digit1;
+        private Button digit2;
+        private Button digit3;
+        private Button plus;
         private Button button21;
-        private Button button22;
-        private Button button23;
+        private Button digit0;
+        private Button decimalPoint;
         private Button button24;
         private NumericUpDown numericUpDown1;
         private Label label4;
