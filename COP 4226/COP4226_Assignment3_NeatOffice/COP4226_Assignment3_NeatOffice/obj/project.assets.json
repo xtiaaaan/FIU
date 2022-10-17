@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicoa\\source\\repos\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
+      "projectUniqueName": "C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
       "projectName": "COP4226_Assignment3_NeatOffice",
-      "projectPath": "C:\\Users\\nicoa\\source\\repos\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
+      "projectPath": "C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
       "packagesPath": "C:\\Users\\nicoa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicoa\\source\\repos\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\obj\\",
+      "outputPath": "C:\\Users\\nicoa\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
