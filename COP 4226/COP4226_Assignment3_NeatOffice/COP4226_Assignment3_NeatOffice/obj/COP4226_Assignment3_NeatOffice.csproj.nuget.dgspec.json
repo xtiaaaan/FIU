@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Richard U\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj": {}
+    "C:\\Users\\ruria\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Richard U\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj": {
+    "C:\\Users\\ruria\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Richard U\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
+        "projectUniqueName": "C:\\Users\\ruria\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
         "projectName": "COP4226_Assignment3_NeatOffice",
-        "projectPath": "C:\\Users\\Richard U\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
-        "packagesPath": "C:\\Users\\Richard U\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Richard U\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\obj\\",
+        "projectPath": "C:\\Users\\ruria\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice.csproj",
+        "packagesPath": "C:\\Users\\ruria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ruria\\Documents\\GitHub\\FIU\\COP 4226\\COP4226_Assignment3_NeatOffice\\COP4226_Assignment3_NeatOffice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Richard U\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ruria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
