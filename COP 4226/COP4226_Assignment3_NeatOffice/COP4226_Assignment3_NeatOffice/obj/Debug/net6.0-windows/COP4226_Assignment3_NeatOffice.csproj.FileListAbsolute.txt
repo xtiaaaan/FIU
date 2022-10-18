@@ -1,0 +1,17 @@
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.csproj.AssemblyReference.cache
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\bin\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.exe
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\bin\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.deps.json
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\bin\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.runtimeconfig.json
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\bin\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.dll
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\bin\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.pdb
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.Form1.resources
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.csproj.GenerateResource.cache
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.AssemblyInfoInputs.cache
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.AssemblyInfo.cs
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.csproj.CoreCompileInputs.cache
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.dll
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\refint\COP4226_Assignment3_NeatOffice.dll
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.pdb
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.genruntimeconfig.cache
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\ref\COP4226_Assignment3_NeatOffice.dll
