@@ -191,9 +191,19 @@ namespace COP4226_Assignment3_NeatOffice
                         break;
                 }
         }
+        private void change_calculator_font(object sender, EventArgs e)
+        {
+            FontDialog font_dialog = new FontDialog();
+            if (font_dialog.ShowDialog() == DialogResult.OK)
+                foreach (Control control_item in tableLayoutPanel1.Controls)
+                {
+                    control_item.Font = font_dialog.Font;
+                }
+
+        }
 
         //Calculator History
-        private void print_calculator_history(object sender, EventArgs e)
+        private void printCalculatorHistory(object sender, EventArgs e)
         {
             PrintDialog PrintDialog1 = new PrintDialog();
             PrintDocument printDoc = new PrintDocument();
@@ -233,16 +243,7 @@ namespace COP4226_Assignment3_NeatOffice
         
 
         
-        private void change_calculator_font(object sender, EventArgs e)
-        {
-            FontDialog font_dialog = new FontDialog();
-            if (font_dialog.ShowDialog() == DialogResult.OK)
-                foreach (Control control_item in tableLayoutPanel1.Controls)
-                {
-                    control_item.Font = font_dialog.Font;
-                }
-
-        }
+        
 
         
         /*
