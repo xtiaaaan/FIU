@@ -211,7 +211,6 @@ namespace COP4226_Assignment4_WallpaperDesign
             this.textureBrushToolStripMenuItem.Name = "textureBrushToolStripMenuItem";
             this.textureBrushToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.textureBrushToolStripMenuItem.Text = "Texture Brush";
-            this.textureBrushToolStripMenuItem.Click += new System.EventHandler(this.textureBrushToolStripMenuItem_Click);
             // 
             // hatchBrushToolStripMenuItem
             // 

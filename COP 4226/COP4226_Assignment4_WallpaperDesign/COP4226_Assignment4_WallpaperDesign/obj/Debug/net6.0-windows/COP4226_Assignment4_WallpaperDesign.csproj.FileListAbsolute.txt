@@ -22,3 +22,5 @@ C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment4_WallpaperDesign\COP4226_Assignme
 C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment4_WallpaperDesign\COP4226_Assignment4_WallpaperDesign\obj\Debug\net6.0-windows\COP4226_Assignment4_WallpaperDesign.pdb
 C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment4_WallpaperDesign\COP4226_Assignment4_WallpaperDesign\obj\Debug\net6.0-windows\COP4226_Assignment4_WallpaperDesign.genruntimeconfig.cache
 C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment4_WallpaperDesign\COP4226_Assignment4_WallpaperDesign\obj\Debug\net6.0-windows\ref\COP4226_Assignment4_WallpaperDesign.dll
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment4_WallpaperDesign\COP4226_Assignment4_WallpaperDesign\obj\Debug\net6.0-windows\COP4226_Assignment4_WallpaperDesign.PickHatchBrush.resources
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment4_WallpaperDesign\COP4226_Assignment4_WallpaperDesign\obj\Debug\net6.0-windows\COP4226_Assignment4_WallpaperDesign.PickLinearGradientBrush.resources

@@ -52,7 +52,7 @@ namespace COP4226_Assignment3_NeatOffice
         private void dateCalculator(object sender, EventArgs e)
         {
             if (((DateTimePicker)sender).ContainsFocus)
-                dayCounter.Value = (toDatePicker.Value - fromDatePicker.Value).Days + 1;
+                dayCounter.Value = (toDatePicker.Value - fromDatePicker.Value).Days;
         }
 
         private void dateUpDownChange(object sender, EventArgs e)
@@ -61,9 +61,9 @@ namespace COP4226_Assignment3_NeatOffice
             {
                 decimal count = dayCounter.Value;
                 if (count > 0)
-                    toDatePicker.Value = toDatePicker.Value.AddDays((double)count);
+                    toDatePicker.Value = fromDatePicker.Value.AddDays((double)count);
                 else if (count < 0)
-                    fromDatePicker.Value = fromDatePicker.Value.AddDays((double)count);
+                    fromDatePicker.Value = toDatePicker.Value.AddDays((double)count);
                 else
                     toDatePicker.Value = fromDatePicker.Value;
             }
@@ -272,6 +272,11 @@ namespace COP4226_Assignment3_NeatOffice
         private void deleteAllGraphs(object sender, EventArgs e)
         {
             importedGraphsList.Items.Clear();
+        }
+
+        private void exitApplication(object sender, EventArgs e)
+        {
+            this.Close();
         }
         
         private String calculatorContents;

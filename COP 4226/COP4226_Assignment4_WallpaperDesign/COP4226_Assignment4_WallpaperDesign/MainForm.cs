@@ -167,6 +167,19 @@ namespace COP4226_Assignment4_WallpaperDesign
             updateShapeList(shapeList.SelectedIndex);
         }
 
+        private void HatchBrush_Click(object sender, EventArgs e)
+        {
+            if (shapeList.SelectedIndex < 0)
+                return;
+            PickHatchBrush p = new PickHatchBrush();
+            DialogResult d = p.ShowDialog();
+            if (d != DialogResult.OK)
+                return;
+            shapes[shapeList.SelectedIndex].fillBrush = new HatchBrush(p.hs, p.foregroundColor, p.backgroundColor);
+            updateTileDesign();
+            updateShapeList(shapeList.SelectedIndex);
+        }
+
         private void preview_Click(object sender, EventArgs e)
         {
             Preview f = new Preview(tileDesign.Image, new Size((int)widthInput.Value, (int)heightInput.Value),(int)repsPerRow.Value,(int)repsPerColumn.Value,signature,mirrorStyle);

@@ -188,6 +188,7 @@
             // 
             // clearCalculatorHistoryMenu
             // 
+            this.clearCalculatorHistoryMenu.Image = ((System.Drawing.Image)(resources.GetObject("clearCalculatorHistoryMenu.Image")));
             this.clearCalculatorHistoryMenu.Name = "clearCalculatorHistoryMenu";
             this.clearCalculatorHistoryMenu.Size = new System.Drawing.Size(256, 22);
             this.clearCalculatorHistoryMenu.Text = "Clear Calculator History";
@@ -195,6 +196,7 @@
             // 
             // saveCalculatorHistoryMenu
             // 
+            this.saveCalculatorHistoryMenu.Image = ((System.Drawing.Image)(resources.GetObject("saveCalculatorHistoryMenu.Image")));
             this.saveCalculatorHistoryMenu.Name = "saveCalculatorHistoryMenu";
             this.saveCalculatorHistoryMenu.Size = new System.Drawing.Size(256, 22);
             this.saveCalculatorHistoryMenu.Text = "Save Calculator History As...";
@@ -202,6 +204,7 @@
             // 
             // printCalculatorHistoryMenu
             // 
+            this.printCalculatorHistoryMenu.Image = ((System.Drawing.Image)(resources.GetObject("printCalculatorHistoryMenu.Image")));
             this.printCalculatorHistoryMenu.Name = "printCalculatorHistoryMenu";
             this.printCalculatorHistoryMenu.Size = new System.Drawing.Size(256, 22);
             this.printCalculatorHistoryMenu.Text = "Print Calculator History";
@@ -214,6 +217,7 @@
             // 
             // saveMinimumSpanningTreeMenu
             // 
+            this.saveMinimumSpanningTreeMenu.Image = ((System.Drawing.Image)(resources.GetObject("saveMinimumSpanningTreeMenu.Image")));
             this.saveMinimumSpanningTreeMenu.Name = "saveMinimumSpanningTreeMenu";
             this.saveMinimumSpanningTreeMenu.Size = new System.Drawing.Size(256, 22);
             this.saveMinimumSpanningTreeMenu.Text = "Save Minimum Spanning Tree As...";
@@ -221,6 +225,7 @@
             // 
             // saveShortestPathAsMenu
             // 
+            this.saveShortestPathAsMenu.Image = ((System.Drawing.Image)(resources.GetObject("saveShortestPathAsMenu.Image")));
             this.saveShortestPathAsMenu.Name = "saveShortestPathAsMenu";
             this.saveShortestPathAsMenu.Size = new System.Drawing.Size(256, 22);
             this.saveShortestPathAsMenu.Text = "Save Shortest Path As...";
@@ -233,9 +238,11 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitApplication);
             // 
             // openToolStripMenuItem
             // 
@@ -251,34 +258,38 @@
             // 
             // calculatorHistoryToolStripMenuItem
             // 
+            this.calculatorHistoryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calculatorHistoryToolStripMenuItem.Image")));
             this.calculatorHistoryToolStripMenuItem.Name = "calculatorHistoryToolStripMenuItem";
-            this.calculatorHistoryToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.calculatorHistoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculatorHistoryToolStripMenuItem.Text = "Calculator History";
             this.calculatorHistoryToolStripMenuItem.Click += new System.EventHandler(this.openCalculatorHistory);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // graphMatrixtxtToolStripMenuItem
             // 
+            this.graphMatrixtxtToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("graphMatrixtxtToolStripMenuItem.Image")));
             this.graphMatrixtxtToolStripMenuItem.Name = "graphMatrixtxtToolStripMenuItem";
-            this.graphMatrixtxtToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.graphMatrixtxtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graphMatrixtxtToolStripMenuItem.Text = "Graph Matrix (.txt)";
             this.graphMatrixtxtToolStripMenuItem.Click += new System.EventHandler(this.openFileMenuStrip);
             // 
             // graphMatrixcsvToolStripMenuItem
             // 
+            this.graphMatrixcsvToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("graphMatrixcsvToolStripMenuItem.Image")));
             this.graphMatrixcsvToolStripMenuItem.Name = "graphMatrixcsvToolStripMenuItem";
-            this.graphMatrixcsvToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.graphMatrixcsvToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graphMatrixcsvToolStripMenuItem.Text = "Graph Matrix (.csv)";
             this.graphMatrixcsvToolStripMenuItem.Click += new System.EventHandler(this.openFileMenuStrip);
             // 
             // multipleGraphsToolStripMenuItem
             // 
+            this.multipleGraphsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("multipleGraphsToolStripMenuItem.Image")));
             this.multipleGraphsToolStripMenuItem.Name = "multipleGraphsToolStripMenuItem";
-            this.multipleGraphsToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.multipleGraphsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.multipleGraphsToolStripMenuItem.Text = "Multiple Graphs";
             this.multipleGraphsToolStripMenuItem.Click += new System.EventHandler(this.openMultipleFiles);
             // 
@@ -293,6 +304,7 @@
             // 
             // modCalcDisplayFontMenu
             // 
+            this.modCalcDisplayFontMenu.Image = ((System.Drawing.Image)(resources.GetObject("modCalcDisplayFontMenu.Image")));
             this.modCalcDisplayFontMenu.Name = "modCalcDisplayFontMenu";
             this.modCalcDisplayFontMenu.Size = new System.Drawing.Size(237, 22);
             this.modCalcDisplayFontMenu.Text = "Modify Calculator Display Font";
@@ -300,6 +312,7 @@
             // 
             // backgroundColorMenu
             // 
+            this.backgroundColorMenu.Image = ((System.Drawing.Image)(resources.GetObject("backgroundColorMenu.Image")));
             this.backgroundColorMenu.Name = "backgroundColorMenu";
             this.backgroundColorMenu.Size = new System.Drawing.Size(237, 22);
             this.backgroundColorMenu.Text = "Modify Background Color";
@@ -315,8 +328,9 @@
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // toolStripContainer1
@@ -493,6 +507,7 @@
             // 
             // buttonErase
             // 
+            this.buttonErase.Image = ((System.Drawing.Image)(resources.GetObject("buttonErase.Image")));
             this.buttonErase.Location = new System.Drawing.Point(312, 80);
             this.buttonErase.Name = "buttonErase";
             this.buttonErase.Size = new System.Drawing.Size(97, 40);
@@ -887,14 +902,14 @@
             this.ERASE.Image = ((System.Drawing.Image)(resources.GetObject("ERASE.Image")));
             this.ERASE.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ERASE.Name = "ERASE";
-            this.ERASE.Size = new System.Drawing.Size(30, 20);
+            this.ERASE.Size = new System.Drawing.Size(22, 20);
             this.ERASE.Text = "ERASE";
             this.ERASE.Click += new System.EventHandler(this.operationHandling);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(30, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(22, 6);
             // 
             // LOG
             // 
@@ -902,7 +917,7 @@
             this.LOG.Image = ((System.Drawing.Image)(resources.GetObject("LOG.Image")));
             this.LOG.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LOG.Name = "LOG";
-            this.LOG.Size = new System.Drawing.Size(30, 20);
+            this.LOG.Size = new System.Drawing.Size(22, 20);
             this.LOG.Text = "LOG";
             this.LOG.Click += new System.EventHandler(this.operationHandling);
             // 
@@ -912,14 +927,14 @@
             this.POW.Image = ((System.Drawing.Image)(resources.GetObject("POW.Image")));
             this.POW.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.POW.Name = "POW";
-            this.POW.Size = new System.Drawing.Size(30, 20);
+            this.POW.Size = new System.Drawing.Size(22, 20);
             this.POW.Text = "POW";
             this.POW.Click += new System.EventHandler(this.operationHandling);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(30, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(22, 6);
             // 
             // SIN
             // 
@@ -927,7 +942,7 @@
             this.SIN.Image = ((System.Drawing.Image)(resources.GetObject("SIN.Image")));
             this.SIN.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SIN.Name = "SIN";
-            this.SIN.Size = new System.Drawing.Size(30, 20);
+            this.SIN.Size = new System.Drawing.Size(22, 20);
             this.SIN.Text = "SIN";
             this.SIN.Click += new System.EventHandler(this.operationHandling);
             // 
@@ -937,7 +952,7 @@
             this.COS.Image = ((System.Drawing.Image)(resources.GetObject("COS.Image")));
             this.COS.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.COS.Name = "COS";
-            this.COS.Size = new System.Drawing.Size(30, 20);
+            this.COS.Size = new System.Drawing.Size(22, 20);
             this.COS.Text = "COS";
             this.COS.Click += new System.EventHandler(this.operationHandling);
             // 
@@ -947,14 +962,14 @@
             this.TAN.Image = ((System.Drawing.Image)(resources.GetObject("TAN.Image")));
             this.TAN.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TAN.Name = "TAN";
-            this.TAN.Size = new System.Drawing.Size(30, 20);
+            this.TAN.Size = new System.Drawing.Size(22, 20);
             this.TAN.Text = "TAN";
             this.TAN.Click += new System.EventHandler(this.operationHandling);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(30, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(22, 6);
             // 
             // toolStripPrint
             // 
@@ -962,7 +977,7 @@
             this.toolStripPrint.Image = ((System.Drawing.Image)(resources.GetObject("toolStripPrint.Image")));
             this.toolStripPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripPrint.Name = "toolStripPrint";
-            this.toolStripPrint.Size = new System.Drawing.Size(30, 20);
+            this.toolStripPrint.Size = new System.Drawing.Size(22, 20);
             this.toolStripPrint.Text = "Print";
             this.toolStripPrint.Click += new System.EventHandler(this.printHistory);
             // 
@@ -1122,22 +1137,25 @@
             // 
             // calculatorBackground
             // 
+            this.calculatorBackground.Image = ((System.Drawing.Image)(resources.GetObject("calculatorBackground.Image")));
             this.calculatorBackground.Name = "calculatorBackground";
-            this.calculatorBackground.Size = new System.Drawing.Size(148, 22);
+            this.calculatorBackground.Size = new System.Drawing.Size(180, 22);
             this.calculatorBackground.Text = "Calculator";
             this.calculatorBackground.Click += new System.EventHandler(this.changeBackgroundColor);
             // 
             // dayCounterBackground
             // 
+            this.dayCounterBackground.Image = ((System.Drawing.Image)(resources.GetObject("dayCounterBackground.Image")));
             this.dayCounterBackground.Name = "dayCounterBackground";
-            this.dayCounterBackground.Size = new System.Drawing.Size(148, 22);
+            this.dayCounterBackground.Size = new System.Drawing.Size(180, 22);
             this.dayCounterBackground.Text = "Day Counter";
             this.dayCounterBackground.Click += new System.EventHandler(this.changeBackgroundColor);
             // 
             // graphBackground
             // 
+            this.graphBackground.Image = ((System.Drawing.Image)(resources.GetObject("graphBackground.Image")));
             this.graphBackground.Name = "graphBackground";
-            this.graphBackground.Size = new System.Drawing.Size(148, 22);
+            this.graphBackground.Size = new System.Drawing.Size(180, 22);
             this.graphBackground.Text = "Graph Section";
             this.graphBackground.Click += new System.EventHandler(this.changeBackgroundColor);
             // 

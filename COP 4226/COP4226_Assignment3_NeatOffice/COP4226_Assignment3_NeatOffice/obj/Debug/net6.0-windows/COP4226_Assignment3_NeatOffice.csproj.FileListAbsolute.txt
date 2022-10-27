@@ -15,3 +15,4 @@ C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_N
 C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.pdb
 C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.genruntimeconfig.cache
 C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\ref\COP4226_Assignment3_NeatOffice.dll
+C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\obj\Debug\net6.0-windows\COP4226_Assignment3_NeatOffice.Properties.Resources.resources
