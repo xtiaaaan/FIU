@@ -35,7 +35,7 @@ namespace COP4226_Assignment4_WallpaperDesign
         {
             DialogResult d = colorDialog2.ShowDialog();
             if (d == DialogResult.OK)
-                lastColor = colorDialog1.Color;
+                lastColor = colorDialog2.Color;
             endingColor.BackColor = colorDialog2.Color;
         }
         
