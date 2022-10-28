@@ -42,40 +42,43 @@ namespace COP4226_Assignment4_WallpaperDesign
             // hatchStyleList
             // 
             this.hatchStyleList.FormattingEnabled = true;
-            this.hatchStyleList.ItemHeight = 16;
-            this.hatchStyleList.Location = new System.Drawing.Point(29, 25);
+            this.hatchStyleList.ItemHeight = 15;
+            this.hatchStyleList.Location = new System.Drawing.Point(25, 23);
             this.hatchStyleList.Margin = new System.Windows.Forms.Padding(4);
             this.hatchStyleList.Name = "hatchStyleList";
-            this.hatchStyleList.Size = new System.Drawing.Size(219, 196);
+            this.hatchStyleList.Size = new System.Drawing.Size(192, 184);
             this.hatchStyleList.TabIndex = 0;
+            this.hatchStyleList.SelectedIndexChanged += new System.EventHandler(this.hatchStyleList_SelectedIndexChanged);
             // 
             // foregroundButton
             // 
-            this.foregroundButton.Location = new System.Drawing.Point(299, 69);
+            this.foregroundButton.Location = new System.Drawing.Point(262, 65);
             this.foregroundButton.Margin = new System.Windows.Forms.Padding(4);
             this.foregroundButton.Name = "foregroundButton";
-            this.foregroundButton.Size = new System.Drawing.Size(147, 28);
+            this.foregroundButton.Size = new System.Drawing.Size(129, 26);
             this.foregroundButton.TabIndex = 1;
             this.foregroundButton.Text = "Foreground Color";
             this.foregroundButton.UseVisualStyleBackColor = true;
+            this.foregroundButton.Click += new System.EventHandler(this.foregroundButton_Click);
             // 
             // backgroundButton
             // 
-            this.backgroundButton.Location = new System.Drawing.Point(299, 157);
+            this.backgroundButton.Location = new System.Drawing.Point(262, 147);
             this.backgroundButton.Margin = new System.Windows.Forms.Padding(4);
             this.backgroundButton.Name = "backgroundButton";
-            this.backgroundButton.Size = new System.Drawing.Size(147, 28);
+            this.backgroundButton.Size = new System.Drawing.Size(129, 26);
             this.backgroundButton.TabIndex = 2;
             this.backgroundButton.Text = "Background Color";
             this.backgroundButton.UseVisualStyleBackColor = true;
+            this.backgroundButton.Click += new System.EventHandler(this.backgroundButton_Click);
             // 
             // ok
             // 
             this.ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ok.Location = new System.Drawing.Point(76, 300);
+            this.ok.Location = new System.Drawing.Point(66, 281);
             this.ok.Margin = new System.Windows.Forms.Padding(4);
             this.ok.Name = "ok";
-            this.ok.Size = new System.Drawing.Size(100, 28);
+            this.ok.Size = new System.Drawing.Size(88, 26);
             this.ok.TabIndex = 5;
             this.ok.Text = "OK";
             this.ok.UseVisualStyleBackColor = true;
@@ -83,19 +86,19 @@ namespace COP4226_Assignment4_WallpaperDesign
             // cancel
             // 
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.Location = new System.Drawing.Point(311, 300);
+            this.cancel.Location = new System.Drawing.Point(272, 281);
             this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(100, 28);
+            this.cancel.Size = new System.Drawing.Size(88, 26);
             this.cancel.TabIndex = 6;
             this.cancel.Text = "Cancel";
             this.cancel.UseVisualStyleBackColor = true;
             // 
             // PickHatchBrush
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 343);
+            this.ClientSize = new System.Drawing.Size(447, 322);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.backgroundButton);

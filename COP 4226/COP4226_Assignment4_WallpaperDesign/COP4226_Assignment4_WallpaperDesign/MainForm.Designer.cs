@@ -217,12 +217,14 @@ namespace COP4226_Assignment4_WallpaperDesign
             this.hatchBrushToolStripMenuItem.Name = "hatchBrushToolStripMenuItem";
             this.hatchBrushToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.hatchBrushToolStripMenuItem.Text = "Hatch Brush";
+            this.hatchBrushToolStripMenuItem.Click += new System.EventHandler(this.HatchBrush_Click);
             // 
             // linearGradientBrushToolStripMenuItem
             // 
             this.linearGradientBrushToolStripMenuItem.Name = "linearGradientBrushToolStripMenuItem";
             this.linearGradientBrushToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.linearGradientBrushToolStripMenuItem.Text = "Linear Gradient Brush";
+            this.linearGradientBrushToolStripMenuItem.Click += new System.EventHandler(this.LinearGradientBrush_Click);
             // 
             // toolStripButton1
             // 
