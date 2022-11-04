@@ -180,6 +180,35 @@ namespace COP4226_Assignment4_WallpaperDesign
             updateShapeList(shapeList.SelectedIndex);
         }
 
+        private void LinearGradientBrush_Click(object sender, EventArgs e)
+        {
+            if (shapeList.SelectedIndex < 0)
+                return;
+            PickLinearGradientBrush p = new PickLinearGradientBrush();
+            DialogResult d = p.ShowDialog();
+            if (d != DialogResult.OK)
+                return;
+            shapes[shapeList.SelectedIndex].fillBrush = new LinearGradientBrush(new Rectangle(0, p.size, this.ClientRectangle.Height / 10, this.ClientRectangle.Width / 10), p.beginningColor, p.lastColor, p.angle);
+            updateTileDesign();
+            updateShapeList(shapeList.SelectedIndex);
+        }
+
+        private void TextureBrush_Click(object sender, EventArgs e)
+        {
+            if(shapeList.SelectedIndex < 0)
+            {
+                return;
+            }
+            PickTextureBrush p = new PickTextureBrush();
+            DialogResult d = p.ShowDialog();
+            if (d != DialogResult.OK)
+                return;
+            Image image = Image.FromFile(p.filepath);
+            shapes[shapeList.SelectedIndex].fillBrush = new TextureBrush(image, p.wrapmode);
+            updateTileDesign();
+            updateShapeList(shapeList.SelectedIndex);
+        }
+
         private void preview_Click(object sender, EventArgs e)
         {
             Preview f = new Preview(tileDesign.Image, new Size((int)widthInput.Value, (int)heightInput.Value),(int)repsPerRow.Value,(int)repsPerColumn.Value,signature,mirrorStyle);
@@ -291,11 +320,6 @@ namespace COP4226_Assignment4_WallpaperDesign
         private void shapeType_SelectedIndexChanged(object sender, EventArgs e)
         {
             addShapeButton.Enabled =shapeType.SelectedIndex>=0;
-        }
-
-        private void TextureBrush_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
