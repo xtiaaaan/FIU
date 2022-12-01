@@ -13,5 +13,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = COP4226_Assignment3_NeatOffice
-build_property.ProjectDir = C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment3_NeatOffice\COP4226_Assignment3_NeatOffice\
+build_property.RootNamespace = COP4226_Assignment6_Chess
+build_property.ProjectDir = C:\Users\nicoa\FIU\COP 4226\COP4226_Assignment6_Chess\COP4226_Assignment6_Chess\
