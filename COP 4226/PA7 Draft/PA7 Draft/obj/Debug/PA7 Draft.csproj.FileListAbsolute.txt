@@ -1,0 +1,25 @@
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\bin\Debug\PA7 Draft.exe.config
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\bin\Debug\PA7 Draft.exe
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\bin\Debug\PA7 Draft.pdb
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.csprojAssemblyReference.cache
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\obj\Debug\PA7_Draft.MainForm.resources
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\obj\Debug\PA7_Draft.Properties.Resources.resources
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.csproj.GenerateResource.cache
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.csproj.CoreCompileInputs.cache
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.exe
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.pdb
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\bin\Debug\save button.png
+C:\Users\drbor\source\repos\PA7 Draft\PA7 Draft\bin\Debug\sort icon.ico
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\bin\Debug\save button.png
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\bin\Debug\sort icon.ico
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\bin\Debug\PA7 Draft.exe.config
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\bin\Debug\PA7 Draft.exe
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\bin\Debug\PA7 Draft.pdb
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.csproj.AssemblyReference.cache
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.csproj.SuggestedBindingRedirects.cache
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7_Draft.MainForm.resources
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7_Draft.Properties.Resources.resources
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.csproj.GenerateResource.cache
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.csproj.CoreCompileInputs.cache
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.exe
+C:\Users\nicoa\Downloads\PA7 Draft-1\PA7 Draft\PA7 Draft\obj\Debug\PA7 Draft.pdb
