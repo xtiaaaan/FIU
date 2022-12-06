@@ -105,13 +105,13 @@ namespace PA7_Draft
     }
     class Worker: INotifyPropertyChanged
     {
-        internal int UnfinishedProcess;  // Following the internal convention delcaring an int var for the incomplete proceses.
+		internal int UnfinishedProcess;
         internal BindingList<string> WaitingQueue;
         internal ConcurrentDictionary<string,SortingTask> WorkingSet;
         
         internal Worker()
         {
-            UnfinishedProcess = 0;  // Initializing varible to zero.
+			UnfinishedProcess = 0;
             WaitingQueue = new BindingList<string>();
             WorkingSet = new ConcurrentDictionary<string, SortingTask>();            
         }
@@ -128,7 +128,7 @@ namespace PA7_Draft
             WorkingSet[sourceFile].SaveFile(destinationFile);
             return true;
         }
-    public event PropertyChangedEventHandler PropertyChanged;
+		public event PropertyChangedEventHandler PropertyChanged;
         public void InvokePropertyChanged(PropertyChangedEventArgs e)
         {
             PropertyChangedEventHandler handler = PropertyChanged;

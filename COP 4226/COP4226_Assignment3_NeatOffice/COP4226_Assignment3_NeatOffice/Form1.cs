@@ -1,286 +1,770 @@
-﻿using System.Drawing.Printing;
+﻿using System.Data;
+using System.Drawing.Printing;
+using System.Windows.Forms;
 
 namespace COP4226_Assignment3_NeatOffice
 {
     public partial class Form1 : Form
     {
+
+        private string currentCalculation = "";
+        private string[] xycalHistory;
+        private string xyCurrentInput = "";
+        private string xyNewHistoryLine = "";
+        private bool xyPressed = false;
+        private string xyPressedValue = "";
+        GraphAlgorithms g;
+        //private bool currentCalculationBool = false;
+        //private double currentCalculationDouble = 0;
+
         public Form1()
         {
             InitializeComponent();
-            this.graphAlgo = new GraphAlgorithms(graphProgressBar, graphStatusLabel, graphStatusStrip);
-            this.calculatorLogic = new CalculatorLogic();
+            g = new GraphAlgorithms(toolStripProgressBar1, toolStripStatusLabel3, statusStrip2);
         }
-
-        private void calculateResultHandler(object sender, EventArgs e)
+        private void Form1_Close(object sender, EventArgs e)
         {
-            String result = calculatorLogic.calculateResult(sender, calculatorTextbox, this.calculatorContents);
-            calculatorTextbox.Text = result;
-            calculatorContents = result;
+            Application.Exit();
         }
 
-        private void operatorHandler(object sender, EventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            calculatorLogic.addOperation(sender, calculatorTextbox);
+            DialogResult result = MessageBox.Show("You sure you wanna close Neat Office?", "App In Progress", MessageBoxButtons.YesNo);
+            e.Cancel = (result == DialogResult.No);
         }
 
-        private void operationHandling(object sender, EventArgs e)
+        #region Calculator
+
+        private void change_Calculator_Font_Click(object sender, EventArgs e)
         {
-            calculatorLogic.addNonBinary(sender, calculatorTextbox);
+
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Font = fontDialog1.Font;
+            }
+
         }
 
-        private void digitHandler(object sender, EventArgs e)
+        private void change_Calculator_Color_Click(object sender, EventArgs e)
         {
-            if (calculatorTextbox.Text == "0" || calculatorTextbox.Text == "NaN" || calculatorTextbox.Text == "∞")
-                calculatorTextbox.Clear();
-            Button button = sender as Button;
-            calculatorTextbox.Text += button.Text;
+
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                tableLayoutPanel1.BackColor = colorDialog1.Color;
+            }
+
         }
 
-        private void clearText(object sender, EventArgs e)
+        private void digit_Click(object sender, EventArgs e)
         {
-            calculatorTextbox.Text = 0.ToString();
-            this.calculatorContents = 0.ToString();
-            calculatorLogic.calculatorHistory.Clear();
+
+            double xyPressedButtonDouble;
+            bool numQuestion = double.TryParse(((Button)sender).Text, out xyPressedButtonDouble);
+
+            if (xyPressed == true && numQuestion)
+            {
+                double xyPressedValueDouble;
+                double.TryParse(xyPressedValue, out xyPressedValueDouble);
+
+
+                xyCurrentInput += (Math.Pow(xyPressedValueDouble, xyPressedButtonDouble));
+                xyNewHistoryLine += xyPressedValue + "^" + ((Button)sender).Text + " =";
+
+                xyCurrentInput = cal(xyCurrentInput).ToString();
+
+                xycalHistory[xycalHistory.Length - 2] = xyNewHistoryLine;
+                xycalHistory[xycalHistory.Length - 1] = xyCurrentInput;
+
+                textBox1.Lines = xycalHistory;
+                xyPressed = false;
+                return;
+            }
+
+            if (String.Compare(textBox1.Lines[textBox1.Lines.Length - 1], "0") == 0 && int.TryParse(((Button)sender).Text, out _))
+            {
+                var calHistory = (string[])textBox1.Lines.Clone();
+                calHistory[calHistory.Length - 1] = ((Button)sender).Text;
+                textBox1.Lines = calHistory;
+            }
+            else
+            {
+                textBox1.Text += ((Button)sender).Text;
+            }
         }
 
-        private void ceClick(object sender, EventArgs e)
+        private void backspace_Click(object sender, EventArgs e)
         {
-            calculatorTextbox.Text = 0.ToString();
-            this.calculatorContents = calculatorTextbox.Text;
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]) || String.Compare(textBox1.Lines[textBox1.Lines.Length - 1], "0") == 0)
+            {
+                return;
+            }
+
+            var calHistory = (string[])textBox1.Lines.Clone();
+
+            var temp = textBox1.Lines[textBox1.Lines.Length - 1].Remove(textBox1.Lines[textBox1.Lines.Length - 1].Length - 1, 1);
+            calHistory[calHistory.Length - 1] = temp;
+            textBox1.Lines = calHistory;
         }
 
-        private void dateCalculator(object sender, EventArgs e)
+        private void squareRoot_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+            string currentInput = calHistory[calHistory.Length - 3];
+
+            string[] textSplit = calHistory[calHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            string newHistoryLine = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            currentInput += (Math.Pow(Double.Parse((cal(textSplit[index])).ToString()), 0.5)).ToString();
+            newHistoryLine += "sqr(" + textSplit[index].Trim() + ") =";
+
+            currentInput = cal(currentInput).ToString();
+
+            calHistory[calHistory.Length - 2] = newHistoryLine;
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void square_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+            string currentInput = calHistory[calHistory.Length - 3];
+
+            string[] textSplit = calHistory[calHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            string newHistoryLine = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            currentInput += (Math.Pow(Double.Parse((cal(textSplit[index])).ToString()), 2)).ToString();
+            newHistoryLine += "sqr(" + textSplit[index].Trim() + ") =";
+
+            currentInput = cal(currentInput).ToString();
+
+            calHistory[calHistory.Length - 2] = newHistoryLine;
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void divideOneBy_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]) || String.Compare(textBox1.Lines[textBox1.Lines.Length - 1], "0") == 0)
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+            string currentInput = calHistory[calHistory.Length - 3];
+
+            string[] textSplit = calHistory[calHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            string newHistoryLine = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            currentInput += cal("1/" + textSplit[index]);
+            newHistoryLine += "1/" + textSplit[index] + " =";
+
+            currentInput = cal(currentInput).ToString();
+
+            calHistory[calHistory.Length - 2] = newHistoryLine;
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void calculate_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]) || String.Compare(textBox1.Lines[textBox1.Lines.Length - 1], "0") == 0)
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+
+            currentCalculation = cal(calHistory[calHistory.Length - 2]).ToString().Trim();
+            calHistory[calHistory.Length - 1] = cal(calHistory[calHistory.Length - 2]).ToString().Trim();
+            calHistory[calHistory.Length - 2] = calHistory[calHistory.Length - 2] + "=";
+
+            textBox1.Lines = calHistory;
+
+        }
+
+        private void CE_Click(object sender, EventArgs e)
+        {
+            var calHistory = (string[])textBox1.Lines.Clone();
+
+            calHistory[calHistory.Length - 1] = "0";
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            var calHistory = (string[])textBox1.Lines.Clone();
+
+            if (calHistory.Length < 2)
+            {
+                return;
+            }
+
+            int index = calHistory.Length - 2;
+
+            for (int i = index; i < calHistory.Length - 1; i++)
+            {
+                calHistory[i] = calHistory[i + 1];
+            }
+
+            Array.Resize(ref calHistory, calHistory.Length - 1);
+
+            //calHistory[calHistory.Length - 2] = "";
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void plusMinus_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]) || String.Compare(textBox1.Lines[textBox1.Lines.Length - 1], "0") == 0)
+            {
+                return;
+            }
+
+            var calHistory = (string[])textBox1.Lines.Clone();
+
+            string currentInput = calHistory[calHistory.Length - 1];
+            string[] textSplit = calHistory[calHistory.Length - 1].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 1].Trim().Substring(0, (calHistory[calHistory.Length - 1].Length - textSplit[index].Length)).Trim();
+
+            currentInput += "-" + textSplit[index];
+
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void log_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+            string currentInput = calHistory[calHistory.Length - 3];
+
+            string[] textSplit = calHistory[calHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            string newHistoryLine = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            //currentInput += (Math.Pow(Double.Parse((cal(textSplit[index])).ToString()), 2)).ToString();
+            currentInput += (Math.Log10(Double.Parse((cal(textSplit[index])).ToString()))).ToString();
+            newHistoryLine += "log(" + textSplit[index].Trim() + ") =";
+
+            currentInput = cal(currentInput).ToString();
+
+            calHistory[calHistory.Length - 2] = newHistoryLine;
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void xy_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            xycalHistory = (string[])textBox1.Lines.Clone();
+            xyCurrentInput = xycalHistory[xycalHistory.Length - 3];
+
+            string[] textSplit = xycalHistory[xycalHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            xyCurrentInput = xycalHistory[xycalHistory.Length - 3].Trim().Substring(0, (xycalHistory[xycalHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            xyNewHistoryLine = xycalHistory[xycalHistory.Length - 3].Trim().Substring(0, (xycalHistory[xycalHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            xyPressedValue = (cal(textSplit[index])).ToString();
+
+            xyPressed = true;
+            //currentInput += (Math.Pow(Double.Parse((cal(textSplit[index])).ToString()), 2)).ToString();
+            //currentInput += (Math.Log10(Double.Parse((cal(textSplit[index])).ToString()))).ToString();
+            //newHistoryLine += "log(" + textSplit[index].Trim() + ") =";
+
+            //currentInput = cal(currentInput).ToString();
+
+            //calHistory[calHistory.Length - 2] = newHistoryLine;
+            //calHistory[calHistory.Length - 1] = currentInput;
+
+            //textBox1.Lines = calHistory;
+
+        }
+
+        private void clear_History_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            currentCalculation = "";
+            textBox1.Text = "0";
+
+        }
+
+        private void save_file_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]) || String.Compare(textBox1.Lines[textBox1.Lines.Length - 1], "0") == 0)
+            {
+                return;
+            }
+
+            //SaveFileDialog SaveFileDialog1 = new SaveFileDialog();
+            string documentDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            saveFileDialog1.InitialDirectory = documentDirectory;
+            saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+
+            //saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (saveFileDialog1.FileName != "")
+                {
+                    string fileName = saveFileDialog1.FileName;
+
+                    File.WriteAllText(fileName, textBox1.Text);
+                }
+            }
+
+        }
+
+        private void open_file_Click(object sender, EventArgs e)
+        {
+            //if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]) || String.Compare(textBox1.Lines[textBox1.Lines.Length - 1], "0") == 0)
+            //{
+            //    return;
+            //}
+
+            //SaveFileDialog SaveFileDialog1 = new SaveFileDialog();
+            string documentDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            openFileDialog1.InitialDirectory = documentDirectory;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.DefaultExt = "txt";
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+
+            //saveFileDialog1.ShowDialog();
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (openFileDialog1.FileName != "")
+                {
+                    string fileName = openFileDialog1.FileName;
+
+                    textBox1.Text = File.ReadAllText(openFileDialog1.FileName);
+
+                }
+            }
+
+        }
+
+        private void sin_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+            string currentInput = calHistory[calHistory.Length - 3];
+
+            string[] textSplit = calHistory[calHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            string newHistoryLine = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            //currentInput += (Math.Pow(Double.Parse((cal(textSplit[index])).ToString()), 2)).ToString();
+            currentInput += (Math.Sin(Double.Parse((cal(textSplit[index])).ToString()))).ToString();
+            newHistoryLine += "sin(" + textSplit[index].Trim() + ") =";
+
+            currentInput = cal(currentInput).ToString();
+
+            calHistory[calHistory.Length - 2] = newHistoryLine;
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void cos_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+            string currentInput = calHistory[calHistory.Length - 3];
+
+            string[] textSplit = calHistory[calHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            string newHistoryLine = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            //currentInput += (Math.Pow(Double.Parse((cal(textSplit[index])).ToString()), 2)).ToString();
+            currentInput += (Math.Cos(Double.Parse((cal(textSplit[index])).ToString()))).ToString();
+            newHistoryLine += "cos(" + textSplit[index].Trim() + ") =";
+
+            currentInput = cal(currentInput).ToString();
+
+            calHistory[calHistory.Length - 2] = newHistoryLine;
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private void tan_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Lines.Length == 0 || String.IsNullOrEmpty(textBox1.Lines[textBox1.Lines.Length - 1]))
+            {
+                return;
+            }
+
+            textBox1.Text += Environment.NewLine;
+            textBox1.Text += Environment.NewLine;
+            var calHistory = (string[])textBox1.Lines.Clone();
+            string currentInput = calHistory[calHistory.Length - 3];
+
+            string[] textSplit = calHistory[calHistory.Length - 3].Trim().Split(new Char[] { 'x', '÷', '+', '-' });
+            int index = textSplit.Length - 1;
+
+            currentInput = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+            string newHistoryLine = calHistory[calHistory.Length - 3].Trim().Substring(0, (calHistory[calHistory.Length - 3].Length - textSplit[index].Length)).Trim();
+
+            //currentInput += (Math.Pow(Double.Parse((cal(textSplit[index])).ToString()), 2)).ToString();
+            currentInput += (Math.Tan(Double.Parse((cal(textSplit[index])).ToString()))).ToString();
+            newHistoryLine += "tan(" + textSplit[index].Trim() + ") =";
+
+            currentInput = cal(currentInput).ToString();
+
+            calHistory[calHistory.Length - 2] = newHistoryLine;
+            calHistory[calHistory.Length - 1] = currentInput;
+
+            textBox1.Lines = calHistory;
+        }
+
+        private object cal(string text)
+        {
+            string formattedCalculation = text.ToString().Replace("x", "*").ToString().Replace("÷", "/").ToString();
+            Console.WriteLine(formattedCalculation);
+
+            DataTable dt = new DataTable();
+            var v = new object();
+            try
+            {
+                v = dt.Compute(formattedCalculation, "");
+            }
+            catch (Exception e)
+            {
+                v = "NaN";
+            }
+
+            return v;
+        }
+
+        #endregion
+
+        #region DaysCounter
+
+        private void change_DayCounter_Color_Click(object sender, EventArgs e)
+        {
+
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                splitContainer2.Panel2.BackColor = colorDialog1.Color;
+            }
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDown1.ContainsFocus)
+            {
+                decimal count = numericUpDown1.Value;
+                if (count > 0)
+                    toDate.Value = fromDate.Value.AddDays((double)count);
+                else if (count < 0)
+                    fromDate.Value = toDate.Value.AddDays((double)-count);
+                else
+                    toDate.Value = fromDate.Value;
+            }
+        }
+
+        private void fromDate_ValueChanged(object sender, EventArgs e)
         {
             if (((DateTimePicker)sender).ContainsFocus)
-                dayCounter.Value = (toDatePicker.Value - fromDatePicker.Value).Days;
-        }
-
-        private void dateUpDownChange(object sender, EventArgs e)
-        {
-            if (dayCounter.ContainsFocus)
             {
-                decimal count = dayCounter.Value;
-                if (count > 0)
-                    toDatePicker.Value = fromDatePicker.Value.AddDays((double)count);
-                else if (count < 0)
-                    fromDatePicker.Value = toDatePicker.Value.AddDays((double)count);
-                else
-                    toDatePicker.Value = fromDatePicker.Value;
+                DateTime to = toDate.Value;
+                DateTime from = fromDate.Value;
+                numericUpDown1.Value = to.Subtract(from).Days;
+                numericUpDown1.Value = numericUpDown1.Value + (decimal)1;
             }
         }
+        #endregion
 
-        private void toolStripStatusTimer(object sender, EventArgs e)
-        {
-            toolStripStatusLabel.Text = $"Good Day! Today is {DateTime.Today.ToLongDateString()}. The time is {DateTime.Now.ToLongTimeString()}";
-        }
+        #region Graph
 
-        private void printHistory(object sender, EventArgs e)
+        private void change_Graph_Color_Click(object sender, EventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
-            PrintDocument printDocument = new PrintDocument();
-            printDialog.ShowDialog();
-        }
 
-        private void changeBackgroundColor(object sender, EventArgs e)
-        {
-            ToolStripMenuItem backgroundColorMenu = sender as ToolStripMenuItem;
-            ColorDialog colorDialog = new ColorDialog();
-            if(colorDialog.ShowDialog() == DialogResult.OK)
-                switch (backgroundColorMenu.Name)
-                {
-                    case "calculatorBackground":
-                        horizontalContainer.Panel1.BackColor = colorDialog.Color;
-                        break;
-                    case "dayCounterBackground":
-                        horizontalContainer.Panel2.BackColor = colorDialog.Color;
-                        break;
-                    case "graphBackground":
-                        verticalContainer.Panel2.BackColor = colorDialog.Color;
-                        break;
-                    case "backgroundColorMenu":
-                        this.BackColor = colorDialog.Color;
-                        break;
-                }
-        }
-
-        private void changeCalculatorFont(object sender, EventArgs e)
-        {
-            FontDialog fontDialog = new FontDialog();
-            if(fontDialog.ShowDialog() == DialogResult.OK)
-                foreach(Control controlItem in tableLayoutPanel1.Controls)
-                {
-                    controlItem.Font = fontDialog.Font;
-                }
-        }
-
-        private void openMultipleFiles(object sender, EventArgs e)
-        {
-            DialogResult result = openFileDialog1.ShowDialog();
-            if(result == DialogResult.OK)
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                foreach(String file in openFileDialog1.FileNames)
-                {
-                    try
-                    {
-                        importedGraphsList.Items.Add(file);
-                        if (file.EndsWith("txt"))
-                        {
-                            this.graphAlgo.ReadGraphFromTXTFile(file);
-                        }
-                        else if (file.EndsWith("csv"))
-                        {
-                            this.graphAlgo.ReadGraphFromCSVFile(file);
-                        }
-                        else
-                            throw new Exception("This file type is not accepted.\nPlease select either a .csv or a .txt file.");
-                    }
-                    catch(Exception err)
-                    {
-                        MessageBox.Show("Error" + err.Message);
-                    }
-                }
-            }
-        }
-
-        private void openFile(object sender, EventArgs e)
-        {
-            ToolStripButton open = sender as ToolStripButton;
-            if (open.Name.Equals("open_txt"))
-            {
-                openFileDialog1.Filter = "txt files (*.txt)|*.txt";
-                openFileDialog1.Multiselect = false;
-            }
-            else if (open.Name.Equals("open_csv"))
-            {
-                openFileDialog1.Filter = "csv files (*.csv)|*.csv";
-                openFileDialog1.Multiselect = false;
+                splitContainer1.Panel2.BackColor = colorDialog1.Color;
             }
 
-            DialogResult result = openFileDialog1.ShowDialog();
-            if(result == DialogResult.OK)
-            {
-                try
-                {
-                    importedGraphsList.Items.Add(openFileDialog1.FileNames[0]);
-                    if (openFileDialog1.FileNames[0].EndsWith("txt"))
-                    {
-                        this.graphAlgo.ReadGraphFromTXTFile(openFileDialog1.FileNames[0]);
-                    }
-                    else if (openFileDialog1.FileNames[0].EndsWith("csv"))
-                    {
-                        this.graphAlgo.ReadGraphFromCSVFile(openFileDialog1.FileNames[0]);
-                    }
-                }
-                catch(Exception err)
-                {
-                    MessageBox.Show("Error: " + err.Message);
-                }
-            }
         }
 
-        private void openFileMenuStrip(object sender, EventArgs e)
+        private void open_Txt_Graph_Click(object sender, EventArgs e)
         {
-            ToolStripMenuItem open = sender as ToolStripMenuItem;
-            if (open.Name.Equals("open_txt"))
-            {
-                openFileDialog1.Filter = "txt files (*.txt)|*.txt";
-                openFileDialog1.Multiselect = false;
-            }
-            else if (open.Name.Equals("open_csv"))
-            {
-                openFileDialog1.Filter = "csv files (*.csv)|*.csv";
-                openFileDialog1.Multiselect = false;
-            }
 
-            DialogResult result = openFileDialog1.ShowDialog();
-            if(result == DialogResult.OK)
-            {
-                try
-                {
-                    importedGraphsList.Items.Add(openFileDialog1.FileNames[0]);
-                    if (openFileDialog1.FileNames[0].EndsWith("txt"))
-                    {
-                        this.graphAlgo.ReadGraphFromTXTFile(openFileDialog1.FileNames[0]);
-                    }
-                    else if (openFileDialog1.FileNames[0].EndsWith("csv"))
-                    {
-                        this.graphAlgo.ReadGraphFromCSVFile(openFileDialog1.FileNames[0]);
-                    }
-                }
-                catch(Exception err)
-                {
-                    MessageBox.Show("Error: " + err.Message);
-                }
-            }
-        }
+            string documentDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-        private void openCalculatorHistory(object sender, EventArgs e)
-        {
+            openFileDialog1.InitialDirectory = documentDirectory;
+            openFileDialog1.RestoreDirectory = true;
+            //openFileDialog1.FilterIndex = 1;
+            openFileDialog1.DefaultExt = "txt";
             openFileDialog1.Filter = "txt files (*.txt)|*.txt";
-            openFileDialog1.Multiselect = false;
-            string[] lines = File.ReadAllLines(openFileDialog1.FileName);
-            foreach (string line in lines)
+
+            //saveFileDialog1.ShowDialog();
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                calculatorLogic.calculatorHistory.Add(line);
-            }
-        }
-
-        private void runPrim(object sender, EventArgs e)
-        {
-            this.graphAlgo.GetMST(importedGraphsList.GetItemText(importedGraphsList.SelectedItem));
-            resultsList.Items.Add($"MST: {importedGraphsList.GetItemText(importedGraphsList.SelectedItem)}");
-        }
-
-        private void runDjikstras(object sender, EventArgs e)
-        {
-            this.graphAlgo.Dijkstra(importedGraphsList.GetItemText(importedGraphsList.SelectedItem));
-            resultsList.Items.Add($"Shortest Paths: {importedGraphsList.GetItemText(importedGraphsList.SelectedItem)}");
-        }
-
-        private void saveGraphResults(object sender, EventArgs e)
-        {
-            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                var temp = resultsList.GetItemText(resultsList.SelectedItem).Trim();
-                for(int i = 0; i < temp.Length; i++)
+                if (openFileDialog1.FileName != "")
                 {
-                    temp = temp.Remove(0, temp.IndexOf(' ') + 1);
+                    string fileName = openFileDialog1.FileName;
+
+                    g.ReadGraphFromTXTFile(fileName);
+                    listBox2.Items.Add(fileName);
+
+                    //textBox1.Text = File.ReadAllText(openFileDialog1.FileName);
+
                 }
-                if (resultsList.GetItemText(resultsList.SelectedItem).Contains("Shortest Path"))
-                    this.graphAlgo.WriteSSSPSolutionTo("shortest_path_result_" + temp, temp);
-                else if (resultsList.GetItemText(resultsList.SelectedItem).Contains("MST"))
-                    this.graphAlgo.WriteMSTSolutionTo("MST_result_" + temp, temp);
             }
+
         }
 
-        private void saveCalculator(object sender, EventArgs e)
+        private void open_Csv_Graph_Click(object sender, EventArgs e)
         {
-            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+
+            string documentDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            openFileDialog1.InitialDirectory = documentDirectory;
+            openFileDialog1.RestoreDirectory = true;
+            //openFileDialog1.FilterIndex = 1;
+            openFileDialog1.DefaultExt = "csv";
+            openFileDialog1.Filter = "csv files (*.csv)|*.csv";
+
+            //saveFileDialog1.ShowDialog();
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                TextWriter tw = new StreamWriter(saveFileDialog1.FileName);
-                foreach (String s in calculatorLogic.calculatorHistory)
-                    tw.WriteLine(s);
-                tw.Close();
+                if (openFileDialog1.FileName != "")
+                {
+                    string fileName = openFileDialog1.FileName;
+
+                    g.ReadGraphFromCSVFile(fileName);
+                    listBox2.Items.Add(fileName);
+
+                    //textBox1.Text = File.ReadAllText(openFileDialog1.FileName);
+
+                }
+            }
+
+        }
+
+        private void open_Multiple_Graph_Click(object sender, EventArgs e)
+        {
+
+            string documentDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            openFileDialog1.InitialDirectory = documentDirectory;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.Multiselect = true;
+            //openFileDialog1.FilterIndex = 1;
+            //openFileDialog1.DefaultExt = "csv";
+            openFileDialog1.Filter = "all supported(*.csv,*.txt)|*.csv;*.txt|csv files (*.csv)|*.csv|txt files (*.txt)|*.txt";
+
+            //saveFileDialog1.ShowDialog();
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (openFileDialog1.FileNames.Length > 0)
+                {
+
+                    foreach (string item in openFileDialog1.FileNames)
+                    {
+
+                        if (String.Compare(Path.GetExtension(item), ".csv") == 0)
+                        {
+                            g.ReadGraphFromCSVFile(item);
+                            listBox2.Items.Add(item);
+                        }
+                        else if (String.Compare(Path.GetExtension(item), ".txt") == 0)
+                        {
+                            g.ReadGraphFromTXTFile(item);
+                            listBox2.Items.Add(item);
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+
+        private void delete_Selected_Graph_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Remove(listBox2.SelectedItem);
+
+        }
+
+        private void delete_Selected_Graphs_Click(object sender, EventArgs e)
+        {
+
+            while (listBox2.Items.Count != 0)
+            {
+                listBox2.Items.RemoveAt(0);
+            }
+
+        }
+
+        private void apply_Prims_Click(object sender, EventArgs e)
+        {
+
+            if (listBox2.SelectedItems.Count > 0 && listBox2.SelectedItems.Count < 2)
+            {
+                string temp = listBox2.SelectedItem.ToString();
+
+                g.GetMST(temp);
+                temp = "MST: " + temp;
+
+                listBox1.Items.Add(temp);
+            }
+
+        }
+
+        private void apply_Dijkstras_Click(object sender, EventArgs e)
+        {
+
+            if (listBox2.SelectedItems.Count > 0 && listBox2.SelectedItems.Count < 2)
+            {
+                string temp = listBox2.SelectedItem.ToString();
+
+                g.Dijkstra(temp);
+                temp = "Shortest Paths: " + temp;
+
+                listBox1.Items.Add(temp);
+            }
+
+        }
+
+        private void save_Graph_Results_Click(object sender, EventArgs e)
+        {
+
+            if (listBox1.SelectedItems.Count > 0 && listBox1.SelectedItems.Count < 2)
+            {
+                string documentDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                saveFileDialog1.InitialDirectory = documentDirectory;
+                saveFileDialog1.RestoreDirectory = true;
+                saveFileDialog1.FilterIndex = 1;
+                saveFileDialog1.DefaultExt = "txt";
+                saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+
+                //saveFileDialog1.ShowDialog();
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    if (saveFileDialog1.FileName != "")
+                    {
+
+                        string[] tempFile = listBox1.SelectedItem.ToString().Split(": ");
+
+                        if (String.Compare(tempFile[0], "MST") == 0)
+                        {
+                            g.WriteMSTSolutionTo(saveFileDialog1.FileName, tempFile[1]);
+                            listBox1.Items.Remove(listBox1.SelectedItem);
+                        }
+                        else if (String.Compare(tempFile[0], "Shortest Paths") == 0)
+                        {
+                            g.WriteSSSPSolutionTo(saveFileDialog1.FileName, tempFile[1]);
+                            listBox1.Items.Remove(listBox1.SelectedItem);
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        #endregion
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Good Day! Today is " + DateTime.Now.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Visible)
+            {
+                textBox1.SelectionStart = textBox1.Text.Length;
+                textBox1.ScrollToCaret();
             }
         }
-
-        private void deleteSelectedGraph(object sender, EventArgs e)
-        {
-            importedGraphsList.Items.Remove(importedGraphsList.GetItemText(importedGraphsList.SelectedItem));
-        }
-
-        private void deleteAllGraphs(object sender, EventArgs e)
-        {
-            importedGraphsList.Items.Clear();
-        }
-
-        private void exitApplication(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
-        private String calculatorContents;
-        private GraphAlgorithms graphAlgo;
-        private CalculatorLogic calculatorLogic;
     }
 }
