@@ -265,7 +265,7 @@ namespace PA6_Draft
         {
             if (Game.WhiteTimeLimit == "0:10")
             {
-                SoundPlayer soundPlayer = new SoundPlayer(@"Resources\resurrect.wav");
+                SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\nicoa\FIU\COP 4226\PA6 Draft\PA6 Draft\PA6 Draft\Resources\resurrect.wav");
                 soundPlayer.Load();
                 soundPlayer.Play();
             }
@@ -276,7 +276,7 @@ namespace PA6_Draft
         {
             if (Game.BlackTimeLimit == "0:10")
             {
-                SoundPlayer soundPlayer = new SoundPlayer(@"Resources\resurrect.wav");
+                SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\nicoa\FIU\COP 4226\PA6 Draft\PA6 Draft\PA6 Draft\Resources\resurrect.wav");
                 soundPlayer.Load();
                 soundPlayer.Play();
             }

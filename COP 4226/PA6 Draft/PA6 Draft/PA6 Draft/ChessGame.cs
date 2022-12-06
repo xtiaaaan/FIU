@@ -105,7 +105,7 @@ namespace PA6_Draft
             if (CapturedPiece != Piece.NONE)
             {
                 // Makes Sound When Piece is captured.
-                SoundPlayer soundPlayer = new SoundPlayer(@"Resources\capture.wav");
+                SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\nicoa\FIU\COP 4226\PA6 Draft\PA6 Draft\PA6 Draft\Resources\capture.wav");
                 soundPlayer.Load();
                 soundPlayer.Play();
 
@@ -248,7 +248,7 @@ namespace PA6_Draft
             Board[3][7].Occupant = Piece.WQUEEN;
             Board[4][7].Occupant = Piece.WKING;
             Moves = new List<Move>();
-            SoundPlayer soundPlayer = new SoundPlayer(@"Resources\startgame.wav");
+            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\nicoa\FIU\COP 4226\PA6 Draft\PA6 Draft\PA6 Draft\Resources\startgame.wav");
             soundPlayer.Load();
             soundPlayer.Play();
         }
@@ -268,7 +268,7 @@ namespace PA6_Draft
         {
             if (!IsCheck(whiteKing) && AllLegalMoves(whiteKing).Count == 0)
             {
-                SoundPlayer soundPlayer = new SoundPlayer(@"Resources\resurrect.wav");
+                SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\nicoa\FIU\COP 4226\PA6 Draft\PA6 Draft\PA6 Draft\Resources\resurrect.wav");
                 soundPlayer.Load();
                 soundPlayer.Play();
             }
@@ -292,7 +292,7 @@ namespace PA6_Draft
             {
                 if (move.X2 == kingSquare.File - 'a' && move.Y2 == 8 - kingSquare.Rank)//if move threatens the king
                 {
-                    SoundPlayer soundPlayer = new SoundPlayer(@"Resources\slayer.wav");
+                    SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\nicoa\FIU\COP 4226\PA6 Draft\PA6 Draft\PA6 Draft\Resources\slayer.wav");
                     soundPlayer.Load();
                     soundPlayer.Play();
                     return true;
@@ -328,7 +328,7 @@ namespace PA6_Draft
                             all.Add(move);
                     }
                 }
-            SoundPlayer soundPlayer = new SoundPlayer(@"Resources\MOVE.wav");
+            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\nicoa\FIU\COP 4226\PA6 Draft\PA6 Draft\PA6 Draft\Resources\MOVE.wav");
             soundPlayer.Load();
             soundPlayer.Play();
             return all;
